@@ -468,7 +468,7 @@ class Client
         $list = new SignatureRequestList($response);
 
         if ($page > $list->getNumPages()) {
-            throw new Error('page_not_found', 'Page not found');
+            return null;
         }
 
         return $list;
