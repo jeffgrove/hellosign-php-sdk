@@ -270,7 +270,7 @@ class Client
         $list = new TemplateList($response);
 
         if ($page > $list->getNumPages()) {
-            throw new Error('page_not_found', 'Page not found');
+            null;
         }
 
         return $list;
